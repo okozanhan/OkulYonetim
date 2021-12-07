@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+
+</head>
+<body style="background-color: white">
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Anasayfa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a sec:authorize="hasAnyAuthority('ADMIN')" class="nav-link" href="/index">Admin Paneli <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a sec:authorize="hasAnyAuthority('ADMIN')" class="nav-link" href="/studentlist">Öğrenci Listele <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">İletişim <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/rektor">Rektör <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/bolum">Bilgisayar Mühendisliği <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/logout">Çıkış  <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+</div>
+<div class="row" style="width: 100% ; padding: 3%">
+    <div class="col-lg-6 text-center" style="" >
+        <img style="width: 80%" src="https://www.cumhuriyet.edu.tr/resimler/prof_dr_alim_yildiz.jpg">
+    </div>
+    <div class="col-lg-6" style="   ">
+        <h2>Prof. Dr. Alim YILDIZ</h2><br>
+        <p>1968 yılında Sivas'ta doğdu. İlk ve orta öğrenimini Sivas'ta, yükseköğrenimini Marmara Üniversitesi İlahiyat Fakültesinde tamamladı. Aynı fakültede Türk-İslam edebiyatı alanında yüksek lisans yaptı. İstanbul, Aydın ve İzmir'de öğretmenlik görevlerinde bulundu. 1998 yılında Cumhuriyet Üniversitesi İlahiyat Fakültesi Türk-İslam Edebiyatı Anabilim Dalında araştırma görevlisi oldu. Doktora çalışmasını 2002 yılında Dokuz Eylül Üniversitesinde tamamladı. 2004'te yardımcı doçent, 2006'da doçent, 2012 yılında Profesör oldu. </p>
+        <p>Değişik gazete ve dergilerde şiir ve yazıları yayımlandı. Muştu ve Buruciye Edebiyat dergilerinde yayın yönetmenliği, Sultanşehir dergisinde sanat danışmanlığı görevini üstlendi. Şiirlerinden bir kısmı bestelendi.</p>
+        <p>Prof. Dr. Alim Yıldız'ın yayımlanmış 30'un üzerinde kitabı, ulusal ve uluslararası toplantılarda sunduğu çok sayıda tebliği ve çeşitli dergilerde yayımlanan ilmî makaleleri bulunmaktadır.</p>
+    </div>
+</div>
+<footer style="background-color: #deded5; margin-top: 6%">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">İletişim</h5>
+                <p>
+                    Sivas Cumhuriyet Üniversitesi
+                    Mühendislik Fakültesi
+                    Bilgisayar Mühendisliği Bölümü
+                    Kat:2 58140    Kampüs / SİVAS
+                </p>
+                <p>0 346 219 1010 / 2473 
+                    (Bölüm Sekreterliği / Öğrenci İşleri</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">Linkler</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                        <a href="https://www.cumhuriyet.edu.tr" style="color: #4f4f4f;">Cumhuriyet Üniversitesi</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="https://twitter.com/cumunivkurumsal?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="color: #4f4f4f;">Twitter</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="https://www.instagram.com/cumunivkurumsal/?hl=tr" style="color: #4f4f4f;">İnstagram</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">Saatler</h5>
+                <table class="table" style="color: #4f4f4f; border-color: #666;">
+                    <tbody>
+                        <tr>
+                            <td>Mon - Fri:</td>
+                            <td>08.00 - 17.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sat - Sun:</td>
+                            <td>Kapalı</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

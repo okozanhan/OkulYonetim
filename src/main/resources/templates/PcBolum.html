@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+    <style>
+        .col-lg-4{
+            margin-top: 1%;
+            margin-bottom: 1%
+        }
+    </style>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Anasayfa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a sec:authorize="hasAnyAuthority('ADMIN')" class="nav-link" href="/index">Admin Paneli <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a sec:authorize="hasAnyAuthority('ADMIN')" class="nav-link" href="/studentlist">Öğrenci Listele <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">İletişim <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/rektor">Rektör <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/bolum">Bilgisayar Mühendisliği <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/logout">Çıkış  <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div><br>
+<h2 style="text-align: center">Akademik Kadro</h2>
+
+<div class="row mt-5 " style="width: 100%">
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50" style="background-color: #EEEBDD">
+            <img style="align-self: center" class="card-img-top w-100" src="http://ceng1.cumhuriyet.edu.tr/images/personel/hidayettakci.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Doç. Dr. Hidayet TAKÇI </h5>
+                    <h6>Bölüm Başkanı</h6>
+                    <p>Mail: htakci at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2271</p>
+                    <p>Ofis: BM211</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+
+    </div>
+
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50 " style="background-color: #EEEBDD">
+            <img style="align-self: center" class="card-img-top w-100" src="http://ceng1.cumhuriyet.edu.tr/images/personel/gyuksek.jpg
+                 " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Doç. Dr. Ahmet Gürkan YÜKSEK </h5>
+                    <h6>Bölüm Başkan Yardımcısı</h6>
+                    <p>	Mail: agyuksek at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2235</p>
+                    <p>Ofis: BM216</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50 " style="background-color: #EEEBDD">
+            <img style="align-self: center" class="card-img-top w-100" src="http://ceng1.cumhuriyet.edu.tr/images/personel/FIsmailoglu.jpeg
+                 " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. Öğr. Üyesi Fırat İSMAİLOĞLU</h5>
+                    <h6>Bölüm Başkan Yardımcısı</h6>
+                    <p>	Mail: fismailoglu at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2462</p>
+                    <p>Ofis: BM210</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50" style="background-color: #EEEBDD">
+            <img src="http://ceng1.cumhuriyet.edu.tr/images/personel/dkarki.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Doç. Dr. H. Doğan KARKI </h5>
+                    <p>Mail: kargi at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 1412</p>
+                    <p>Ofis: BM213</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50 " style="background-color: #EEEBDD">
+            <img style="align-self: center" class="card-img-top w-100" src="http://ceng1.cumhuriyet.edu.tr/images/personel/harslan.jpg
+                 " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. Öğr. Üyesi Halil ARSLAN </h5>
+                    <p>	Mail: harslan at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2273</p>
+                    <p>Ofis: BM215</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50 " style="background-color: #EEEBDD">
+            <img style="align-self: center" class="card-img-top w-100" src="http://ceng1.cumhuriyet.edu.tr/images/personel/kgurkahraman.jpg
+                 " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. Öğr. Üyesi Kali GÜRKAHRAMAN</h5>
+                    <p>Mail: kgurkahraman at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2461</p>
+                    <p>Ofis: BM210</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50" style="background-color: #EEEBDD">
+            <img src="http://ceng1.cumhuriyet.edu.tr/images/b0a5e14a-cbd2-494f-96ee-1ab7602972e2.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Arş. Gör. Dr. Emre DELİBAŞ</h5>
+                    <p>	 Mail: edelibas at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2474</p>
+                    <p>Ofis: BM206</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50 " style="background-color: #EEEBDD">
+            <img style="align-self: center" class="card-img-top w-100" src="http://ceng1.cumhuriyet.edu.tr/images/personel/eyalcin.jpg
+                 " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Arş. Gör. Dr. Emre YALÇIN </h5>
+                    <p>	Mail: eyalcin at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2426</p>
+                    <p>Ofis: BM206</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50 " style="background-color: #EEEBDD">
+            <img style="align-self: center" class="card-img-top w-100" src="http://ceng1.cumhuriyet.edu.tr/images/personel/kseker.jpg
+                 " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Arş. Gör. Abdulkadir ŞEKER</h5>
+                    <p>	Mail: aseker at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2464</p>
+                    <p>Ofis: BM208</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50" style="background-color: #EEEBDD">
+            <img src="http://ceng1.cumhuriyet.edu.tr/images/personel/fratyelkuvan.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Arş. Gör. Ahmet Fırat YELKUVAN</h5>
+                    <p>	Mail: aftyelkuvan at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2272</p>
+                    <p>Ofis: BM209</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50" style="background-color: #EEEBDD">
+            <img src="http://ceng1.cumhuriyet.edu.tr/images/personel/syesilyurt.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Arş. Gör. Saliha YEŞİLYURT</h5>
+                    <p>Mail: salihayesilyurt at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 487 2246</p>
+                    <p>Ofis: BM212</p>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-4 " style="display: flex;justify-content: center">
+        <div class=" card text-center w-50" style="background-color: #EEEBDD">
+            <img src="http://ceng1.cumhuriyet.edu.tr/images/personel/person.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Öğr. Gör. Bilal KASAP</h5>
+                    <p>	Mail: bkasap at cumhuriyet.edu.tr</p>
+                    <p>Tel: 0 346 219 1010 </p>
+                    <p>Ofis: BM201</p>
+                </div>
+        </div>
+    </div>
+
+</div>
+
+<footer style="background-color: #deded5;">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">İletişim</h5>
+                <p>
+                    Sivas Cumhuriyet Üniversitesi
+                    Mühendislik Fakültesi
+                    Bilgisayar Mühendisliği Bölümü
+                    Kat:2 58140    Kampüs / SİVAS
+                </p>
+                <p>0 346 219 1010 / 2473 
+                    (Bölüm Sekreterliği / Öğrenci İşleri</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">Linkler</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                        <a href="https://www.cumhuriyet.edu.tr" style="color: #4f4f4f;">Cumhuriyet Üniversitesi</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="https://twitter.com/cumunivkurumsal?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="color: #4f4f4f;">Twitter</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="https://www.instagram.com/cumunivkurumsal/?hl=tr" style="color: #4f4f4f;">İnstagram</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">Saatler</h5>
+                <table class="table" style="color: #4f4f4f; border-color: #666;">
+                    <tbody>
+                        <tr>
+                            <td>Mon - Fri:</td>
+                            <td>08.00 - 17.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sat - Sun:</td>
+                            <td>Kapalı</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

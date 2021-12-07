@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>Kullanıcı ekleme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Anasayfa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item active">
+                    <a sec:authorize="hasAnyAuthority('ADMIN')" class="nav-link" href="/index">Admin Paneli <span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item active">
+                    <a sec:authorize="hasAnyAuthority('ADMIN')" class="nav-link" href="/studentlist">Öğrenci Listele <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">İletişim <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/rektor">Rektör <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/bolum">Bilgisayar Mühendisliği <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/logout">Çıkış  <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+<div>
+
+    <div align="center">
+        <h1>Kullanıcı Ekle</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${user}"
+              method="post">
+
+            <table border="0" cellpadding="10">
+                <tr>
+                    <td>Kullanıcı Adı:</td>
+                    <td><input class="form-control" type="text" th:field="*{username}" /></td>
+                </tr>
+                <tr>
+                    <td>Şifre:</td>
+                    <td><input class="form-control" type="password" th:field="*{password}" /></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-success" type="submit">Kaydet</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
