@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SpringCrud.aykutSpring.services;
+package SpringCrud.okanSpring.services;
 
-import SpringCrud.aykutSpring.model.User;
-import SpringCrud.aykutSpring.repository.UserRepository;
+import SpringCrud.okanSpring.repository.UserRepository;
+import SpringCrud.okanSpring.model.User;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;

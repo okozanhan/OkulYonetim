@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SpringCrud.aykutSpring.security;
+package SpringCrud.okanSpring.security;
 
-import SpringCrud.aykutSpring.repository.UserRepository;
+import SpringCrud.okanSpring.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import SpringCrud.aykutSpring.model.User;
+import SpringCrud.okanSpring.model.User;
 
 /**
  *

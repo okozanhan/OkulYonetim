@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SpringCrud.aykutSpring.services;
+package SpringCrud.okanSpring.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import SpringCrud.aykutSpring.model.Student;
-import SpringCrud.aykutSpring.repository.StudentRepository;
+import SpringCrud.okanSpring.model.Student;
+import SpringCrud.okanSpring.repository.StudentRepository;
 
 @Service
 public class StudentServices {

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SpringCrud.aykutSpring.controller;
+package SpringCrud.okanSpring.controller;
 
-import SpringCrud.aykutSpring.model.Student;
+import SpringCrud.okanSpring.model.Student;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import SpringCrud.aykutSpring.model.User;
-import SpringCrud.aykutSpring.repository.UserRepository;
-import SpringCrud.aykutSpring.services.StudentServices;
-import SpringCrud.aykutSpring.services.UserServices;
+import SpringCrud.okanSpring.model.User;
+import SpringCrud.okanSpring.repository.UserRepository;
+import SpringCrud.okanSpring.services.StudentServices;
+import SpringCrud.okanSpring.services.UserServices;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

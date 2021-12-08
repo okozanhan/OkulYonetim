@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SpringCrud.aykutSpring.security;
+package SpringCrud.okanSpring.security;
 
-import SpringCrud.aykutSpring.model.Role;
+import SpringCrud.okanSpring.model.Role;
 import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import SpringCrud.aykutSpring.model.User;
+import SpringCrud.okanSpring.model.User;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;

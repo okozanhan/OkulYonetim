@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SpringCrud.aykutSpring.repository;
+package SpringCrud.okanSpring.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import SpringCrud.aykutSpring.model.User;
+import SpringCrud.okanSpring.model.User;
 import org.springframework.data.jpa.repository.Query;
 
 public interface UserRepository extends CrudRepository<User, Long> {
